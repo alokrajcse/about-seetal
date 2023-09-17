@@ -1,3 +1,4 @@
+/* Reset some default styles */
 html {
   background-color: #5f45bb;
   background-image: linear-gradient(to bottom right, #189cac, #d054e4);
@@ -19,6 +20,7 @@ a {
   text-decoration: none;
 }
 
+/* Background image and layout styles */
 .wallpaper {
   display: block;
   height: 100%;
@@ -31,15 +33,18 @@ a {
   opacity: 0.1;
   position: fixed;
 }
+
 .content {
   display: flex;
   position: relative;
   min-height: 100vh;
 }
+
 .side {
   max-height: 20rem;
   max-width: 20rem;
 }
+
 .about {
   max-width: 26rem;
 }
@@ -60,12 +65,10 @@ a {
 @media screen and (min-width: 800px) {
   .content {
     padding: 4rem;
-    /* justify-content: space-around; */
     justify-content: space-evenly;
     align-items: center;
   }
   .side {
-    /* flex-grow: 0; */
     flex-shrink: 0;
     height: 20rem;
     margin-left: 4rem;
@@ -78,6 +81,7 @@ a {
   }
 }
 
+/* Profile picture styles */
 .wallpaper,
 .picture-shadow,
 .picture-image {
@@ -93,6 +97,7 @@ a {
   position: relative;
   width: 100%;
 }
+
 .picture-shadow {
   border-radius: 290486px;
   background-image: radial-gradient(#000 0%, rgba(0, 0, 0, 0) 70%);
@@ -105,6 +110,7 @@ a {
   position: absolute;
 }
 
+/* Text styles */
 .name {
   font-size: 2.25rem;
   line-height: 1.125;
@@ -138,6 +144,7 @@ a {
   font-size: 1.5rem;
 }
 
+/* Contact button and email address styles */
 .contact {
   display: inline-block;
   margin-top: 1.5rem;
@@ -149,6 +156,7 @@ a {
   transform-origin: center;
   transition-duration: 100ms;
 }
+
 .button {
   background-color: #fff;
   border-radius: 290486px;
@@ -170,11 +178,13 @@ a {
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
   transform: scale(1.02) translateY(-4px);
 }
+
 .button:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
   transform: scale(0.98) translateY(-2px);
 }
 
+/* Social media icon styles */
 .social {
   display: flex;
   margin-top: 1.5rem;
@@ -196,7 +206,6 @@ a {
   opacity: 0.5;
   transition-property: opacity, transform;
   width: 2rem;
-  will-change: opacity, transform;
 }
 
 .social a:hover {
@@ -207,4 +216,9 @@ a {
 .social a:active {
   opacity: 1;
   transform: scale(1.1);
+}
+
+/* CSS to hide the email address initially */
+.hidden {
+  display: none;
 }
